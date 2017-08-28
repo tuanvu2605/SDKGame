@@ -13,6 +13,20 @@
 		CC498E721F53AF1D0092B48E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC498E701F53AF1D0092B48E /* Main.storyboard */; };
 		CC498E741F53AF1D0092B48E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC498E731F53AF1D0092B48E /* Assets.xcassets */; };
 		CC498E771F53AF1D0092B48E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC498E751F53AF1D0092B48E /* LaunchScreen.storyboard */; };
+		CC498E811F53AFD40092B48E /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC498E7F1F53AFD40092B48E /* MenuCell.m */; };
+		CC498E821F53AFD40092B48E /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC498E801F53AFD40092B48E /* MenuCell.xib */; };
+		CC498EAC1F53B1910092B48E /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = CC498EA81F53B1910092B48E /* FAKFontAwesome.m */; };
+		CC498EAD1F53B1910092B48E /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CC498EAA1F53B1910092B48E /* FAKIcon.m */; };
+		CC498EAE1F53B1910092B48E /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = CC498EAB1F53B1910092B48E /* FontAwesome.otf */; };
+		CC498EB21F53B1B80092B48E /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = CC498EB11F53B1B80092B48E /* KLCPopup.m */; };
+		CC498EB61F53B2320092B48E /* KRLCollectionViewGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CC498EB51F53B2320092B48E /* KRLCollectionViewGridLayout.m */; };
+		CC498EB91F53B2770092B48E /* OptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC498EB81F53B2770092B48E /* OptionView.m */; };
+		CC498EBD1F53B2950092B48E /* OptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC498EBC1F53B2950092B48E /* OptionView.xib */; };
+		CC498EC01F53B4570092B48E /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CC498EBF1F53B4570092B48E /* MenuItem.m */; };
+		CC498EC41F53BDFD0092B48E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC498EC31F53BDFD0092B48E /* icon.png */; };
+		CC498EC61F53C78B0092B48E /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = CC498EC51F53C78B0092B48E /* photo.png */; };
+		CC498EC81F53D2FE0092B48E /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = CC498EC71F53D2FE0092B48E /* share.png */; };
+		CC498ECA1F53D82F0092B48E /* beer.png in Resources */ = {isa = PBXBuildFile; fileRef = CC498EC91F53D82E0092B48E /* beer.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +40,27 @@
 		CC498E731F53AF1D0092B48E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC498E761F53AF1D0092B48E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC498E781F53AF1D0092B48E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC498E7E1F53AFD40092B48E /* MenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCell.h; sourceTree = "<group>"; };
+		CC498E7F1F53AFD40092B48E /* MenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCell.m; sourceTree = "<group>"; };
+		CC498E801F53AFD40092B48E /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		CC498EA71F53B1910092B48E /* FAKFontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKFontAwesome.h; sourceTree = "<group>"; };
+		CC498EA81F53B1910092B48E /* FAKFontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKFontAwesome.m; sourceTree = "<group>"; };
+		CC498EA91F53B1910092B48E /* FAKIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAKIcon.h; sourceTree = "<group>"; };
+		CC498EAA1F53B1910092B48E /* FAKIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAKIcon.m; sourceTree = "<group>"; };
+		CC498EAB1F53B1910092B48E /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		CC498EB01F53B1B80092B48E /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
+		CC498EB11F53B1B80092B48E /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
+		CC498EB41F53B2320092B48E /* KRLCollectionViewGridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRLCollectionViewGridLayout.h; sourceTree = "<group>"; };
+		CC498EB51F53B2320092B48E /* KRLCollectionViewGridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRLCollectionViewGridLayout.m; sourceTree = "<group>"; };
+		CC498EB71F53B2770092B48E /* OptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionView.h; sourceTree = "<group>"; };
+		CC498EB81F53B2770092B48E /* OptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionView.m; sourceTree = "<group>"; };
+		CC498EBC1F53B2950092B48E /* OptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionView.xib; sourceTree = "<group>"; };
+		CC498EBE1F53B4570092B48E /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		CC498EBF1F53B4570092B48E /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		CC498EC31F53BDFD0092B48E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CC498EC51F53C78B0092B48E /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		CC498EC71F53D2FE0092B48E /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		CC498EC91F53D82E0092B48E /* beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +93,25 @@
 		CC498E661F53AF1D0092B48E /* HiSDK */ = {
 			isa = PBXGroup;
 			children = (
+				CC498EB31F53B2230092B48E /* KRLLayout */,
+				CC498EAF1F53B1950092B48E /* KLCPopup */,
+				CC498EA61F53B1860092B48E /* Font */,
 				CC498E6A1F53AF1D0092B48E /* AppDelegate.h */,
 				CC498E6B1F53AF1D0092B48E /* AppDelegate.m */,
+				CC498EC31F53BDFD0092B48E /* icon.png */,
 				CC498E6D1F53AF1D0092B48E /* ViewController.h */,
+				CC498EC71F53D2FE0092B48E /* share.png */,
+				CC498EB71F53B2770092B48E /* OptionView.h */,
+				CC498EB81F53B2770092B48E /* OptionView.m */,
+				CC498EC91F53D82E0092B48E /* beer.png */,
+				CC498EC51F53C78B0092B48E /* photo.png */,
+				CC498EBC1F53B2950092B48E /* OptionView.xib */,
 				CC498E6E1F53AF1D0092B48E /* ViewController.m */,
+				CC498E7E1F53AFD40092B48E /* MenuCell.h */,
+				CC498E7F1F53AFD40092B48E /* MenuCell.m */,
+				CC498E801F53AFD40092B48E /* MenuCell.xib */,
+				CC498EBE1F53B4570092B48E /* MenuItem.h */,
+				CC498EBF1F53B4570092B48E /* MenuItem.m */,
 				CC498E701F53AF1D0092B48E /* Main.storyboard */,
 				CC498E731F53AF1D0092B48E /* Assets.xcassets */,
 				CC498E751F53AF1D0092B48E /* LaunchScreen.storyboard */,
@@ -77,6 +127,36 @@
 				CC498E681F53AF1D0092B48E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC498EA61F53B1860092B48E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				CC498EA71F53B1910092B48E /* FAKFontAwesome.h */,
+				CC498EA81F53B1910092B48E /* FAKFontAwesome.m */,
+				CC498EA91F53B1910092B48E /* FAKIcon.h */,
+				CC498EAA1F53B1910092B48E /* FAKIcon.m */,
+				CC498EAB1F53B1910092B48E /* FontAwesome.otf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		CC498EAF1F53B1950092B48E /* KLCPopup */ = {
+			isa = PBXGroup;
+			children = (
+				CC498EB01F53B1B80092B48E /* KLCPopup.h */,
+				CC498EB11F53B1B80092B48E /* KLCPopup.m */,
+			);
+			name = KLCPopup;
+			sourceTree = "<group>";
+		};
+		CC498EB31F53B2230092B48E /* KRLLayout */ = {
+			isa = PBXGroup;
+			children = (
+				CC498EB41F53B2320092B48E /* KRLCollectionViewGridLayout.h */,
+				CC498EB51F53B2320092B48E /* KRLCollectionViewGridLayout.m */,
+			);
+			name = KRLLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +190,7 @@
 				TargetAttributes = {
 					CC498E631F53AF1D0092B48E = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = XY29E79Z8X;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,7 +219,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC498E771F53AF1D0092B48E /* LaunchScreen.storyboard in Resources */,
+				CC498ECA1F53D82F0092B48E /* beer.png in Resources */,
+				CC498EC81F53D2FE0092B48E /* share.png in Resources */,
+				CC498EC41F53BDFD0092B48E /* icon.png in Resources */,
+				CC498EAE1F53B1910092B48E /* FontAwesome.otf in Resources */,
 				CC498E741F53AF1D0092B48E /* Assets.xcassets in Resources */,
+				CC498EBD1F53B2950092B48E /* OptionView.xib in Resources */,
+				CC498E821F53AFD40092B48E /* MenuCell.xib in Resources */,
+				CC498EC61F53C78B0092B48E /* photo.png in Resources */,
 				CC498E721F53AF1D0092B48E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,7 +240,14 @@
 			files = (
 				CC498E6F1F53AF1D0092B48E /* ViewController.m in Sources */,
 				CC498E6C1F53AF1D0092B48E /* AppDelegate.m in Sources */,
+				CC498E811F53AFD40092B48E /* MenuCell.m in Sources */,
+				CC498EAC1F53B1910092B48E /* FAKFontAwesome.m in Sources */,
+				CC498EB61F53B2320092B48E /* KRLCollectionViewGridLayout.m in Sources */,
 				CC498E691F53AF1D0092B48E /* main.m in Sources */,
+				CC498EB21F53B1B80092B48E /* KLCPopup.m in Sources */,
+				CC498EB91F53B2770092B48E /* OptionView.m in Sources */,
+				CC498EAD1F53B1910092B48E /* FAKIcon.m in Sources */,
+				CC498EC01F53B4570092B48E /* MenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XY29E79Z8X;
 				INFOPLIST_FILE = HiSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.sinhviendev.HiSDK;
@@ -285,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XY29E79Z8X;
 				INFOPLIST_FILE = HiSDK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.sinhviendev.HiSDK;
