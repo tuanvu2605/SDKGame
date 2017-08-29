@@ -34,6 +34,14 @@
 }
 
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    if (_delegate) {
+        [_delegate viewControllerDidTapInScreen];
+    }
+    NSLog(@"view controller touch");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

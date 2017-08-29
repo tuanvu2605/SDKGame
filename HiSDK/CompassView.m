@@ -11,7 +11,11 @@
 #import "OptionView.h"
 #import "KLCPopup.h"
 
+
 @implementation CompassView
+{
+    OptionView *optv;
+}
 
 -(void)awakeFromNib
 {
@@ -38,6 +42,11 @@
     return shareview;
 }
 
+-(void)didMoveToSuperview
+{
+    self.controller.delegate = self;
+}
+
 -(void)layoutSubviews
 {
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithFrame:self.bounds];
@@ -49,7 +58,7 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"touch");
-    __block OptionView *optv = [OptionView getOptionView];
+    optv = [OptionView getOptionView];
     
     if (UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation)){
         
@@ -71,39 +80,39 @@
                                     dismissOnContentTouch:NO];
         
         
-        [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:2 initialSpringVelocity:8 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [UIView animateWithDuration:0.15 delay:0 usingSpringWithDamping:8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             
             optv.hidden = NO;
             [optv setFrame:CGRectMake(0, 0, viewWidth, viewHeight)];
             optv.center = self.controller.view.center;
             [CompassView compassView].hidden = YES;
-            [popup show];
+//            [popup show];
             
         } completion:^(BOOL finished) {
             
             
             
         }];
-        
-        popup.willStartDismissingCompletion = ^{
-            
-            [UIView animateWithDuration:20 delay:0 usingSpringWithDamping:0 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                
-                
-                [optv setFrame:[CompassView compassView].frame];
-//                [optv removeFromSuperview];
-                [CompassView compassView].hidden = NO;
-//                optv.hidden = YES;
-                
-
-                
-            } completion:^(BOOL finished) {
-                
-                
-                
-            }];
-            
-        };
+//        
+//        popup.willStartDismissingCompletion = ^{
+//            
+//            [UIView animateWithDuration:20 delay:0 usingSpringWithDamping:0 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+//                
+//                
+//                [optv setFrame:[CompassView compassView].frame];
+////                [optv removeFromSuperview];
+//                [CompassView compassView].hidden = NO;
+////                optv.hidden = YES;
+//                
+//
+//                
+//            } completion:^(BOOL finished) {
+//                
+//                
+//                
+//            }];
+//            
+//        };
     
         
      
@@ -118,6 +127,26 @@
         
     }
 
+}
+
+-(void)viewControllerDidTapInScreen
+{
+    NSLog(@"touch delegate");
+            [UIView animateWithDuration:2 delay:0 usingSpringWithDamping:0 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+
+
+                [optv setFrame:CGRectMake(0, 0, 0, 0)];
+                [CompassView compassView].hidden = NO;
+                
+                
+
+
+
+            } completion:^(BOOL finished) {
+
+                [optv removeFromSuperview];
+                
+            }];
 }
 
 

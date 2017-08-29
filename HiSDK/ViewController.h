@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ViewControllerTouchDelegate <NSObject>
+
+-(void)viewControllerDidTapInScreen;
+
+@end
+
 @interface ViewController : UIViewController
+
+@property  (nonatomic , strong) id <ViewControllerTouchDelegate> delegate;
 
 
 @end
