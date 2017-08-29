@@ -87,14 +87,15 @@
         
         popup.willStartDismissingCompletion = ^{
             
-            [UIView animateWithDuration:5 delay:0 usingSpringWithDamping:0 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [UIView animateWithDuration:20 delay:0 usingSpringWithDamping:0 initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                 
                 
-                [optv setFrame:CGRectMake(0, 0, 60, 60)];
+                [optv setFrame:[CompassView compassView].frame];
+//                [optv removeFromSuperview];
                 [CompassView compassView].hidden = NO;
-                optv.hidden = YES;
-                [optv removeFromSuperview];
-//                [KLCPopup dismissAllPopups];
+//                optv.hidden = YES;
+                
+
                 
             } completion:^(BOOL finished) {
                 
