@@ -29,17 +29,25 @@
                         <outlet property="delegate" destination="-1" id="4xS-c4-ayL"/>
                     </connections>
                 </collectionView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ja-75-CNK">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="4Gg-5m-Eua" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7HX-0o-K09"/>
+                <constraint firstItem="5Ja-75-CNK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9sL-dR-zO4"/>
                 <constraint firstAttribute="bottom" secondItem="4Gg-5m-Eua" secondAttribute="bottom" id="QiR-2Q-B6J"/>
+                <constraint firstItem="5Ja-75-CNK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UmG-ht-EfV"/>
                 <constraint firstItem="4Gg-5m-Eua" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Zc3-iO-rOB"/>
+                <constraint firstAttribute="bottom" secondItem="5Ja-75-CNK" secondAttribute="bottom" id="di9-NK-MYu"/>
+                <constraint firstAttribute="trailing" secondItem="5Ja-75-CNK" secondAttribute="trailing" id="qbk-N4-cST"/>
                 <constraint firstAttribute="trailing" secondItem="4Gg-5m-Eua" secondAttribute="trailing" id="xSp-DZ-1FN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="collection" destination="4Gg-5m-Eua" id="0Ow-IH-hwU"/>
+                <outlet property="icon" destination="5Ja-75-CNK" id="hNR-JG-Zyo"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="-170.5"/>
         </view>

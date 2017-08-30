@@ -21,14 +21,39 @@ static NSString *itemCellId = @"itemCellId";
     [self configureLayout];
     [self.collection registerNib:[UINib nibWithNibName:@"MenuCell" bundle:nil] forCellWithReuseIdentifier:itemCellId];
     self.collection.backgroundColor = [UIColor clearColor];
+    
+    FAKFontAwesome *plus = [FAKFontAwesome gamepadIconWithSize:40];
+    [plus addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    UIImage *plusImg = [plus imageWithSize:CGSizeMake(60, 55)];
+    self.icon.image = plusImg;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(imageViewDidTap)];
+    tap.delegate = self;
+    [self.icon addGestureRecognizer:tap];
+    self.icon.userInteractionEnabled = YES;
+    
+    
+}
+
+-(void)imageViewDidTap
+{
+    [_delegate didTapOnImageView];
+}
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
 }
 
 -(void)layoutSubviews
 {
-    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithFrame:self.bounds];
-    effectView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-    [self addSubview:effectView];
-    [self sendSubviewToBack:effectView];
+    if (_effectView) {
+        return;
+    }
+    _effectView = [[UIVisualEffectView alloc]initWithFrame:self.bounds];
+    _effectView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    [self addSubview:_effectView];
+    [self sendSubviewToBack:_effectView];
 }
 
 +(OptionView*)getOptionView
@@ -76,11 +101,21 @@ static NSString *itemCellId = @"itemCellId";
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (_handler) {
-        _handler();
-    }
-    UIImage *img = [UIImage imageNamed:@"photo"];
-    [self shareText:@"Awesome Application" andImage:img andUrl:[NSURL URLWithString:@"https://itunes.apple.com/us/app/the-spear-stickman/id1257539144?mt=8"]];
+    
+    MenuCell *cell = (MenuCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    [cell setHidden:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [cell setHidden:NO];
+    });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [_delegate didTapOnItem];
+        if (indexPath.row == 0) {
+            UIImage *img = [UIImage imageNamed:@"photo"];
+            [self shareText:@"Awesome Application" andImage:img andUrl:[NSURL URLWithString:@"https://itunes.apple.com/us/app/the-spear-stickman/id1257539144?mt=8"]];
+        }
+    });
+  
+
 }
 
 - (void)shareText:(NSString *)text andImage:(UIImage *)image andUrl:(NSURL *)url
