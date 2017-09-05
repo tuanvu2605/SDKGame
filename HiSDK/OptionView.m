@@ -113,6 +113,15 @@ static NSString *itemCellId = @"itemCellId";
             UIImage *img = [UIImage imageNamed:@"photo"];
             [self shareText:@"Awesome Application" andImage:img andUrl:[NSURL URLWithString:@"https://itunes.apple.com/us/app/the-spear-stickman/id1257539144?mt=8"]];
         }
+        if (indexPath.row == 3) {
+            NSURL * URL = [[NSURL alloc]initWithString:@"https://itunes.apple.com/us/developer/vu-anh/id1219655443"];
+            if ([[UIApplication sharedApplication] canOpenURL:URL]) {
+                [[UIApplication sharedApplication] openURL:URL];
+            }
+            else {
+                
+            }
+        }
     });
   
 
@@ -151,10 +160,10 @@ static NSString *itemCellId = @"itemCellId";
     UIImage *remove = [removeAds imageWithSize:CGSizeMake(80, 80)];
     MenuItem *removeAdItem = [[MenuItem alloc]initWithName:@"Remove Ads" andIcon:remove];
     
-    UIImage *beer = [[UIImage imageNamed:@"beer"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    MenuItem *donateItem = [[MenuItem alloc]initWithName:@"Donate" andIcon:beer];
+    UIImage *othergame = [[UIImage imageNamed:@"beer"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    MenuItem *otherItem = [[MenuItem alloc]initWithName:@"Other Game" andIcon:othergame];
     
-    return @[shareItem,removeAdItem,restoreItem,donateItem];
+    return @[shareItem,removeAdItem,restoreItem,otherItem];
     
     
 }
